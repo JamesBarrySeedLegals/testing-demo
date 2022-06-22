@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.6.10"
+    kotlin("jvm") version "1.7.0"
     application
 }
 
@@ -13,9 +13,11 @@ repositories {
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter:2.6.7")
+    implementation("org.springframework.boot:spring-boot-starter:2.7.0")
+    implementation("org.springframework.boot:spring-boot-starter-web:2.7.0")
     testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
     testImplementation("io.mockk:mockk:1.12.4")
+    testImplementation("org.springframework.boot:spring-boot-starter-test:2.7.0")
 }
 
 tasks.withType<KotlinCompile> {
